@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>cart</title>
+  </head>
+  <body class="">
+    <main>
+      <section class="flex justify-center items-center mt-8">
+        <img
+          width="380px"
+          height="40px"
+          src="src/image/cart-header.png"
+          alt=""
+        />
+      </section>
+      <div id="cart"></div>
+
+      <!-- <section
+        class="flex items-center gap-4 shadow-2xl rounded-4xl bg-white p-4"
+      >
+        <img
+          class="bg-amber-600 w-36 h-36 rounded-lg"
+          src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg"
+          alt="React Miler"
+        />
+
+        <div class="flex flex-col w-full">
+          <div class="flex justify-between items-center border-gray-300 pb-2">
+            <h1
+              class="text-black font-bold text-xl truncate overflow-hidden whitespace-nowrap"
+            >
+              Nike React Miler
+            </h1>
+            <img
+              class="w-8 h-8 cursor-pointer"
+              src="src/image/recycle-bin.png"
+              alt="Delete"
+            />
+          </div>
+
+          <div
+            class="flex justify-start items-center gap-3 border-gray-300 py-2"
+          >
+            <button class="border-1 rounded-full mx-1 w-5 h-5"></button>
+            <p class="font-semibold text-lg">color | Size = 42</p>
+          </div>
+
+          <div class="flex justify-between items-center pt-2">
+            <h1 class="font-bold text-xl text-black">$105.00</h1>
+            <button
+              class="bg-gray-100 w-[110px] h-[40px] rounded-4xl text-black font-bold flex justify-center items-center gap-3 shadow-md hover:bg-gray-300 active:scale-95 transition-all duration-200"
+            >
+              <img
+                id="negative"
+                width="10px"
+                height="10px"
+                src="src/svg/negative-sign.svg"
+                alt=""
+              />
+              <span id="curentNumber">2</span>
+              <img
+                id="plus"
+                width="10px"
+                height="10px"
+                src="src/svg/52-523186_plus-sign-comments-plus-icon-svg-hd-png.png"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </section> -->
+      <!-- اینجا میخوام پیغام کانفیرم رو بزنم -->
+      <div
+        id="new-task-overlay"
+        class="hidden z-60 fixed bg-black/60 left-0 top-0 w-dvw h-dvh"
+      >
+        <section id="renderDelete" class="hidden">
+          <!-- <section
+          id="confirm"
+          class="fixed bottom-0 left-0 w-full h-[300px] bg-white z-[50]"
+        >
+          <h1 class="text-center font-semibold text-2xl mt-5">
+            Remove From Cart?
+          </h1>
+          <div>
+            <section class="flex items-center rounded-4xl bg-white p-4">
+              <img
+                class="w-36 h-36 rounded-lg"
+                src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg"
+                alt="React Miler"
+              />
+
+              <div class="flex flex-col w-full">
+                <div class="flex justify-between items-center border-gray-300">
+                  <h1
+                    class="text-black font-bold text-xl truncate overflow-hidden whitespace-nowrap"
+                  >
+                    Nike React Miler
+                  </h1>
+                  <img
+                    class="w-8 h-8 cursor-pointer"
+                    src="src/image/recycle-bin.png"
+                    alt="Delete"
+                  />
+                </div>
+
+                <div
+                  class="flex justify-start items-center gap-3 border-gray-300 py-2"
+                >
+                  <button class="border-1 rounded-full mx-1 w-5 h-5"></button>
+                  <p class="font-semibold text-lg">color | Size = 42</p>
+                </div>
+
+                <div class="flex justify-between items-center pt-2">
+                  <h1 class="font-bold text-xl text-black">$105.00</h1>
+                  <button
+                    class="bg-gray-100 w-[110px] h-[40px] rounded-4xl text-black font-bold flex justify-center items-center gap-3 shadow-md hover:bg-gray-300 active:scale-95 transition-all duration-200"
+                  >
+                    <img
+                      id="negative"
+                      width="10px"
+                      height="10px"
+                      src="src/svg/negative-sign.svg"
+                      alt=""
+                    />
+                    <span id="curentNumber">2</span>
+                    <img
+                      id="plus"
+                      width="10px"
+                      height="10px"
+                      src="src/svg/52-523186_plus-sign-comments-plus-icon-svg-hd-png.png"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="flex justify-center gap-2">
+            <div class="flex justify-center">
+              <button
+                class="bg-gray-200 w-[180px] h-[47px] rounded-4xl text-black"
+              >
+                Cancel
+              </button>
+            </div>
+            <div class="flex justify-center">
+              <button
+                class="bg-black w-[180px] h-[47px] rounded-4xl text-white"
+              >
+                Yes,Remove
+              </button>
+            </div>
+          </div>
+        </section> -->
+        </section>
+      </div>
+
+      <section
+        class="flex justify-center fixed bottom-0 left-0 w-full z-[40] bg-white shadow-lg h-13"
+      >
+        <img
+          width="380px"
+          height="40px"
+          src="src/image/navbar-cart.png"
+          alt="Cart Navbar"
+        />
+      </section>
+
+      <section
+        id="remove-checkout"
+        class="flex justify-between items-center gap-3 bg-white fixed bottom-11 left-0 w-full h-20 shadow-2xl p-4"
+      >
+        <div class="mx-auto">
+          <p class="text-gray-500">Total Price</p>
+          <h1 id="priceNumber" class="font-bold text-2xl"></h1>
+        </div>
+        <div>
+          <button
+            id="checkout-btn"
+            class="bg-black w-[250px] h-[47px] rounded-4xl text-white text-xl font-semibold"
+          >
+            Checkout
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="src/cart.js"></script>
+    <script type="module" src="src/config.js"></script>
+  </body>
+</html>

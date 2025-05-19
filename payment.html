@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Welcome</title>
+  </head>
+  <body>
+    <main>
+      <section class="flex flex-row justify-between mt-5 mx-3">
+        <div class="flex gap-2 justify-center items-center">
+          <a href="checkout.html"
+            ><img
+              width="40px"
+              height="40px"
+              src="src/image/back-btn.png"
+              alt=""
+          /></a>
+          <h1 class="font-bold text-xl">Payment Method</h1>
+        </div>
+      </section>
+      <p class="text-gray-500 font-semibold text-center mt-5">
+        Select the payment method you want to use
+      </p>
+      <section class="">
+        <section
+          class="flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
+        >
+          <div class="flex items-center">
+            <img
+              width="40px"
+              height="40px"
+              src="src/image/my-wallet.png"
+              alt=""
+            />
+            <div class="mx-3">
+              <p class="font-bold">My Wallet</p>
+            </div>
+          </div>
+          <button class="border-2 w-5 h-5 rounded-full"></button>
+        </section>
+      </section>
+      <section>
+        <section
+          class="flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
+        >
+          <div class="flex items-center">
+            <img width="40px" height="40px" src="src/image/paypal.png" alt="" />
+            <div class="mx-3">
+              <p class="font-bold">PayPal</p>
+            </div>
+          </div>
+          <button class="border-2 w-5 h-5 rounded-full"></button>
+        </section>
+      </section>
+      <section>
+        <section
+          class="flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
+        >
+          <div class="flex items-center">
+            <img
+              width="40px"
+              height="40px"
+              src="src/image/google pay.jpeg"
+              alt=""
+            />
+            <div class="mx-3">
+              <p class="font-bold">Google Pay</p>
+            </div>
+          </div>
+          <button class="border-2 w-5 h-5 rounded-full"></button>
+        </section>
+      </section>
+      <section>
+        <section
+          class="flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
+        >
+          <div class="flex items-center">
+            <img
+              width="40px"
+              height="40px"
+              src="src/image/apple pay.png"
+              alt=""
+            />
+            <div class="mx-3">
+              <p class="font-bold">Apple Pay</p>
+            </div>
+          </div>
+          <button class="border-2 w-5 h-5 rounded-full"></button>
+        </section>
+        <section
+          class="flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
+        >
+          <div class="flex items-center">
+            <img
+              width="40px"
+              height="40px"
+              src="src/image/mastercard-logo.png"
+              alt=""
+            />
+            <div class="mx-3">
+              <p class="font-bold">.... .... .... .... 4679</p>
+            </div>
+          </div>
+          <button class="border-2 w-5 h-5 rounded-full"></button>
+        </section>
+      </section>
+      <div class="flex justify-center"></div>
+      <section class="fixed w-full bottom-0 left-0">
+        <div class="flex justify-center">
+          <button
+            class="bg-black w-[380px] h-[47px] rounded-4xl text-white mt-5 mb-12 font-semibold"
+          >
+            Confirm Payment
+          </button>
+        </div>
+      </section>
+      <div class="hidden relative bottom-120 left-10">
+        <section
+          class="flex flex-col justify-center items-center bg-white shadow-2xl w-[350px] h-[500px] rounded-2xl gap-5"
+        >
+          <img src="src/image/order-successfull.png" alt="" />
+          <p class="font-bold text-2xl text-center">Order Successful!</p>
+          <p>You have successfully made order</p>
+          <div class="flex justify-center">
+            <button class="bg-black w-[280px] h-[47px] rounded-4xl text-white">
+              View Order
+            </button>
+          </div>
+          <div class="flex justify-center">
+            <button
+              class="bg-gray-200 w-[280px] h-[47px] rounded-4xl text-black"
+            >
+              View E-Receipt
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="src/config.js"></script>
+  </body>
+</html>

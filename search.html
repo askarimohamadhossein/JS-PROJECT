@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Welcome</title>
+  </head>
+  <body>
+    <main>
+      <section class="flex justify-center items-center mt-5">
+        <div class="relative w-[380px]">
+          <input
+            placeholder="search ..."
+            class="w-full h-[50px] rounded-lg bg-gray-100 pl-10 text-indent-6"
+            type="text"
+            id="search"
+          />
+          <img
+            class="absolute left-3 top-1/2 transform -translate-y-1/2"
+            width="16px"
+            height="16px"
+            src="src/svg/search.svg"
+            alt="search"
+          />
+
+          <img
+            class="absolute right-3 top-1/2 transform -translate-y-1/2"
+            width="16px"
+            height="16px"
+            src="src/image/setting.png"
+            alt="search"
+          />
+        </div>
+      </section>
+      <section
+        id="searchInfo"
+        class="flex items-center justify-between mt-5 mb-5 w-full px-2"
+      ></section>
+      <section id="searchPara" class="grid grid-cols-2"></section>
+      <section id="not-found" class="mx-auto mt-20 hidden">
+        <img
+          width="400px"
+          height="500px"
+          src="src/image/not found.png"
+          alt=""
+        />
+      </section>
+    </main>
+    <script type="module" src="src/product.js"></script>
+
+    <script type="module" src="src/search.js"></script>
+    <script type="module" src="src/config.js"></script>
+  </body>
+</html>

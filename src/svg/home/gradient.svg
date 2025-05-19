@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg fill="none" viewBox="0 0 428 926" xmlns="http://www.w3.org/2000/svg">
+<rect width="428" height="939" fill="url(#a)"/>
+<defs>
+<linearGradient id="a" x1="214" x2="214" y2="939" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0" offset="0"/>
+<stop stop-opacity=".8" offset="1"/>
+</linearGradient>
+</defs>
+</svg>

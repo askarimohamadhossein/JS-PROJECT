@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Checkout</title>
+  </head>
+  <body>
+    <main>
+      <!--قسمت هدر بالای صفحم-->
+      <section class="flex flex-row justify-between mt-5 mx-3">
+        <div class="flex gap-2 justify-center items-center">
+          <a href="cart.html">
+            <img width="40px" height="40px" src="src/image/back-btn.png" alt=""
+          /></a>
+          <h1 class="font-bold text-2xl">Checkout</h1>
+        </div>
+        <div>
+          <img width="30px" height="30px" src="src/image/option.png" alt="" />
+        </div>
+      </section>
+      <section>
+        <h2 class="font-bold text-xl mt-2 mx-5">Shiping Address</h2>
+        <section
+          class="flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl"
+        >
+          <div class="flex">
+            <img src="src/image/location2.png" alt="" />
+            <div class="mx-3">
+              <p class="font-bold">Home</p>
+              <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+          <div>
+            <img
+              id="select-location"
+              width="25px"
+              height="25px"
+              src="src/image/edit.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+        <section>
+          <!--بوردر -->
+          <div class="border-b border-gray-200 mt-8"></div>
+        </section>
+      </section>
+      <section>
+        <p class="font-bold mx-5 mt-2">Order list</p>
+        <div id="checkout-container">
+          <!--این قسمت مون با جاوا اسکریپته حاجی-->
+        </div>
+      </section>
+      <div class="border-b border-gray-200 mt-8"></div>
+      <section>
+        <p class="font-bold mx-5 mt-2">Choose Shiping</p>
+        <section class="flex justify-between items-center mt-5 p-5 rounded-4xl">
+          <div class="flex items-center">
+            <img
+              width="60px"
+              height="60px"
+              src="src/image/choose shiping.jpg"
+              alt=""
+            />
+            <p class="font-bold">Choose Shipping Type</p>
+          </div>
+          <div>
+            <a href="shippingType.html"
+              ><img width="30px" height="30px" src="src/image/next.jpg" alt=""
+            /></a>
+          </div>
+        </section>
+      </section>
+      <div class="border-b border-gray-200"></div>
+
+      <section>
+        <p class="font-bold mx-5 mt-2">Poromo Code</p>
+        <section class="flex justify-between items-center p-5 rounded-4xl">
+          <div class="flex items-center">
+            <section class="flex justify-center items-center">
+              <div class="relative w-[380px]">
+                <input
+                  placeholder="Enter Poromo Code"
+                  class="w-[300px] h-[57px] rounded-xl bg-gray-100 pl-2"
+                  type="number"
+                  id="poromoInp"
+                />
+              </div>
+              <div>
+                <img
+                  id="plus-icon"
+                  width="70px"
+                  height="70px"
+                  src="src/image/plus-icon.png"
+                  alt=""
+                />
+              </div>
+              <div id="change-input-to-btn" class="hidden">
+                <!--این جا میخوام اینپوتمو تبدیل به باتن کنم توی جی اس-->
+              </div>
+            </section>
+          </div>
+          <div>
+            <img width="30px" height="30px" src="src/image/next.jpg" alt="" />
+          </div>
+        </section>
+      </section>
+      <div class="border-b border-gray-200"></div>
+      <section
+        class="bg-white shadow-xl mt-10 border mx-3 border-gray-200 rounded-2xl flex flex-col justify-center gap-3"
+      >
+        <div class="justify-center items-center">
+          <div class="flex justify-between mx-5 mt-2">
+            <!--مبلغ کلی-->
+            <p class="text-gray-500 text-sm">Amount</p>
+            <p class="text-black text-sm font-semibold">$585.00</p>
+          </div>
+          <div class="flex justify-between mx-5 mt-2">
+            <!--قسمت Shiping-->
+            <p class="text-gray-500 text-sm">Shiping</p>
+            <p>-</p>
+          </div>
+          <div class="border-b border-gray-200 mt-4"></div>
+          <div class="flex justify-between mx-5 mt-2">
+            <!--قسمت مبلغ کلیه گوگولی-->
+
+            <p class="text-gray-500 text-sm">Total</p>
+            <p>-</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="flex justify-center">
+          <button
+            class="bg-black w-[380px] h-[47px] rounded-4xl text-white font-semibold mt-12 mb-12"
+          >
+            Continue to payment
+          </button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="src/checkout.js"></script>
+    <script type="module" src="src/config.js"></script>
+  </body>
+</html>
