@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>sign-up</title>
+    <title>SignUp</title>
   </head>
   <body>
     <main>
@@ -18,17 +18,16 @@
       <div class="flex justify-center items-center mt-20">
         <div id="logo"></div>
       </div>
+      <p class="font-bold text-3xl text-center mt-10">SignUp to Your Account</p>
 
       <form
-        id="sign-up-form"
-        class="flex flex-col justify-center items-center gap-15 mt-20"
+        id="login-form"
+        class="flex flex-col justify-center items-center gap-8 mt-20 max-h-fit"
       >
-        <p class="font-bold text-3xl">SignUp to Your Account</p>
-
         <div class="relative flex items-center">
           <input
             itemid="username"
-            class="w-[380px] h-[37px] placeholder:px-1 pl-6 text-indent-6"
+            class="bg-gray-100 w-[380px] h-[45px] rounded-xl placeholder:px-1 pl-10 text-indent-6"
             placeholder="Username"
             type="text"
             id="username"
@@ -36,60 +35,83 @@
           <img
             width="14px"
             height="10.5px"
-            class="absolute"
+            class="absolute mx-4"
             src="src/svg/username.svg"
             alt=""
           />
+          <p
+            id="username-err"
+            class="text-red-500 text-sm font-semibold absolute top-full w-full text-center hidden"
+          ></p>
         </div>
-        <p id="user-err" class="text-red-600 font-semibold text-[14px] hidden">
-          mohamad
-        </p>
 
         <div class="relative flex items-center">
           <input
             itemid="password"
-            class="w-[380px] h-[37px] placeholder:px-1 pl-6 text-indent-6"
+            class="bg-gray-100 w-[380px] h-[45px] rounded-xl placeholder:px-1 pl-10 text-indent-6"
             placeholder="Password "
             type="password"
             id="password"
           />
-
           <img
             width="14px"
             height="14px"
-            class="absolute"
+            class="absolute mx-4"
             src="src/svg/password.svg"
             alt=""
           />
+          <img
+            id="unvisible"
+            width="20px"
+            height="20px"
+            class="absolute mx-4 right-0"
+            src="src/svg/pass-vis.svg"
+            alt=""
+          />
+          <img
+            id="visible"
+            width="20px"
+            height="20px"
+            class="absolute mx-4 right-0 hidden"
+            src="src/image/360_F_355004293_hVBcuqDqpthKjhdc1ZGSIkesKZBxAX0i.jpg"
+            alt=""
+          />
+          <p
+            id="password-err"
+            class="text-red-500 text-sm font-semibold absolute top-full w-full text-center hidden"
+          ></p>
         </div>
-        <p id="pass-err" class="text-red-600 font-semibold text-[14px] hidden">
-          mohamad
-        </p>
 
-        <a href="login.html"
-          ><p
+        <a href="login.html">
+          <p
             id="signup"
-            class="font-medium transition-transform duration-1500"
+            class="font-medium transition-transform duration-1500 mt-5"
           >
-            SignIn
-          </p></a
-        >
-        <p
-          id="system-err"
-          class="text-red-600 font-semibold text-[14px] hidden"
-        >
-          mohamad
-        </p>
+            Login
+          </p>
+        </a>
+        <div class="relative w-full flex justify-center">
+          <p
+            id="system-err"
+            class="text-red-500 font-semibold text-sm text-center absolute top-full w-full hidden"
+          ></p>
+        </div>
+
         <div class="flex justify-center">
           <button
-            id="signup-btn"
-            class="bg-mygray w-[380px] h-[47px] rounded-4xl text-white mt-20 mb-12"
+            type="submit"
+            id="login-btn"
+            class="bg-mygray w-[380px] h-[47px] rounded-4xl text-white mt-30"
           >
             SignUp
           </button>
         </div>
       </form>
     </main>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script type="module" src="src/signup.js"></script>
     <script type="module" src="src/apis/auth.js"></script>
     <script type="module" src="src/header.js"></script>
