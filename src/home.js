@@ -45,21 +45,23 @@ buttons.classList =
 const init = async () => {
   try {
     const response = await brands();
-
-    response.data.forEach((brand) => {
+    const brandData = response.data;
+    brandData.forEach((brand) => {
       const button = document.createElement("button");
 
       button.textContent = brand;
+
+      // console.log(brand);
+
       button.classList =
-        "border-1 border-gray-800 text-black font-semibold p-1 rounded-3xl flex-shrink-0";
+        "border-1 border-gray-800 text-black font-semibold py-1 px-3 mx-2 rounded-3xl flex-shrink-0";
 
       button.addEventListener("click", function () {
         document
           .querySelectorAll("button")
-          .forEach((btn) => btn.classList.remove("bg-black", "text-white"));
-        this.classList.add("bg-black", "text-white");
+          .forEach((btn) => btn.classList.remove("bg-gray-800", "text-white"));
+        button.classList.add("bg-gray-800", "text-white");
       });
-
       buttons.appendChild(button);
     });
   } catch (error) {
@@ -69,6 +71,8 @@ const init = async () => {
 init();
 
 export function renderShoes(data) {
+  // console.log(data); //همهی کفشهارو اینجا تونستم بگیرم
+
   const shoes = document.getElementById("shoes");
   data.forEach((item) => {
     const container = document.createElement("div");
@@ -93,9 +97,18 @@ export function renderShoes(data) {
         $${item.price}.00
       </p>
     `;
+    console.log(item.brand);
+
     container.setAttribute("brand", item.brand);
     shoes.appendChild(container);
   });
+
+  function filterShoesByBrand(selectedBrand) {
+    const filteredShoes = data.filter((item) => item.brand === selectedBrand);
+    renderShoes(filteredShoes); // نمایش فقط کفش‌های برند انتخاب‌شده
+  }
+
+  //اینجا id رو توی لوکال استوریج ذخیره کردم ک روی هر عکس کلیک شد منو ببره به ایدی همون عکس توی جزئیات محصول
 
   document.querySelectorAll(".shoe-image").forEach((img) => {
     img.addEventListener("click", function () {
@@ -108,20 +121,12 @@ export function renderShoes(data) {
   });
 }
 
+// صرفا قسمت infinityScroll با توجه به اطلاعات اقای پژوهش و ai
+
 let pageNumber = 1;
 const showShoes = async (i) => {
   try {
     const shoesResponse = await sneakers(`?page=${i}&limit=10`);
-    // console.log(shoesResponse.data);
-
-    shoesResponse.data.forEach((product) => {
-      // console.log("name:", product.name);
-      // console.log("image:", product.imageURL);
-      // console.log("colors:", product.colors);
-      // console.log("id:", product.id);
-      // localStorage.setItem("shoesId:", product.id);
-    });
-
     const sneaker = shoesResponse.data;
     renderShoes(sneaker);
   } catch (error) {
@@ -130,7 +135,7 @@ const showShoes = async (i) => {
 };
 
 (async () => {
-  for (let i = 1; i < 6; i++) {
+  for (let i = 1; i < 10; i++) {
     await showShoes(i);
   }
 })();
@@ -145,8 +150,9 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//مقدار سرچ اینپوت رو گرفتمش صرفا
+
 document.getElementById("search").addEventListener("change", async () => {
   const searchText = document.getElementById("search").value.trim();
-
   location.href = `search.html?search=${searchText}`;
 });
