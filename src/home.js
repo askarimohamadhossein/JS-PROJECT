@@ -4,7 +4,7 @@ const savedUsername = localStorage.getItem("username");
 
 const now = new Date();
 const hours = now.getHours();
-console.log(hours);
+// console.log(hours);
 
 export function renderTime() {
   if (hours >= 5 && hours < 12) {
@@ -45,18 +45,21 @@ buttons.classList =
 const init = async () => {
   try {
     const response = await brands();
-    // console.log(response.data);
 
     response.data.forEach((brand) => {
       const button = document.createElement("button");
 
       button.textContent = brand;
       button.classList =
-        " border-2 border-black  text-black font-semibold p-1 rounded-3xl flex-shrink-0";
+        "border-1 border-gray-800 text-black font-semibold p-1 rounded-3xl flex-shrink-0";
+
       button.addEventListener("click", function () {
-        this.classList =
-          "bg-black border-2 border-black  text-white font-semibold p-1 rounded-3xl flex-shrink-0";
+        document
+          .querySelectorAll("button")
+          .forEach((btn) => btn.classList.remove("bg-black", "text-white"));
+        this.classList.add("bg-black", "text-white");
       });
+
       buttons.appendChild(button);
     });
   } catch (error) {
@@ -67,31 +70,37 @@ init();
 
 export function renderShoes(data) {
   const shoes = document.getElementById("shoes");
-
   data.forEach((item) => {
-    // console.log(item);
-    // localStorage.setItem("Shoes:", JSON.stringify(item));
-    shoes.innerHTML += `
-      <div class="flex flex-col items-center w-44 mx-3">
-        <div class="w-44 h-44 bg-gray-200 mt-2 rounded-2xl flex justify-center items-center overflow-hidden">
-          <img src="${item.imageURL}" data-id="${item.id}" class="shoe-image max-w-full max-h-full cursor-pointer"/>
-        </div>
-        <div class="w-44 h-6 px-4 text-center">
-          <h1 class="text-xl font-bold text-black truncate overflow-hidden whitespace-nowrap">
-            ${item.name}
-          </h1>
-        </div>
-        <p class="text-black font-semibold px-4 text-start mt-1 text-xl">
-          $${item.price}.00
-        </p>
-      </div>`;
+    const container = document.createElement("div");
+    container.classList.add(
+      "shoesContainer",
+      "flex",
+      "flex-col",
+      "items-center",
+      "w-44",
+      "mx-3"
+    );
+    container.innerHTML = `
+      <div class="w-44 h-44 bg-gray-200 mt-2 rounded-2xl flex justify-center items-center overflow-hidden">
+        <img src="${item.imageURL}" data-id="${item.id}" class="shoe-image max-w-full max-h-full cursor-pointer"/>
+      </div>
+      <div class="w-44 h-6 px-4 text-center">
+        <h1 class="text-xl font-bold text-black truncate overflow-hidden whitespace-nowrap">
+          ${item.name}
+        </h1>
+      </div>
+      <p class="text-black font-semibold px-4 text-start mt-1 text-xl">
+        $${item.price}.00
+      </p>
+    `;
+    container.setAttribute("brand", item.brand);
+    shoes.appendChild(container);
   });
 
   document.querySelectorAll(".shoe-image").forEach((img) => {
     img.addEventListener("click", function () {
       const productId = this.dataset.id;
       console.log("Clicked ID:", productId);
-
       localStorage.setItem("productId", productId);
 
       window.location.href = `product.html?productId=${productId}`;
@@ -103,14 +112,13 @@ let pageNumber = 1;
 const showShoes = async (i) => {
   try {
     const shoesResponse = await sneakers(`?page=${i}&limit=10`);
-    console.log(shoesResponse.data);
+    // console.log(shoesResponse.data);
 
     shoesResponse.data.forEach((product) => {
-      console.log("name:", product.name);
-      console.log("image:", product.imageURL);
-      console.log("colors:", product.colors);
-      console.log("id:", product.id);
-
+      // console.log("name:", product.name);
+      // console.log("image:", product.imageURL);
+      // console.log("colors:", product.colors);
+      // console.log("id:", product.id);
       // localStorage.setItem("shoesId:", product.id);
     });
 

@@ -3,15 +3,14 @@ import { urls } from "./urls";
 
 export const brands = async () => {
   const response = await generateHttpClient().get(urls.sneaker.brands);
-  console.log(response);
+  // console.log(response);
   return response;
 };
 
 export const sneakers = async (query) => {
   const response = await generateHttpClient().get(urls.sneaker.items + query);
   // console.log(response.data);
-  console.log(response);
-
+  // console.log(response);
   return response.data;
 };
 
