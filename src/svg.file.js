@@ -12,29 +12,29 @@ document.getElementById(
 
 `;
 
-document.getElementById(
-  "step-1"
-).innerHTML = `<svg width="102" height="23" viewBox="0 0 102 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1_2497)">
-<rect width="102.003" height="23.0002" fill="white" fill-opacity="0.01"/>
-<rect width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
-<rect width="30.001" height="3.00025" transform="translate(0 10)" fill="black"/>
-<rect x="36.001" width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
-<g opacity="0.5">
-<rect width="30.001" height="3.00025" transform="translate(36.001 10)" fill="black"/>
-</g>
-<rect x="72.002" width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
-<g opacity="0.5">
-<rect width="30.001" height="3.00025" transform="translate(72.002 10)" fill="black"/>
-</g>
-</g>
-<defs>
-<clipPath id="clip0_1_2497">
-<rect width="102.003" height="23.0002" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-`;
+// document.getElementById(
+//   "step-1"
+// ).innerHTML = `<svg width="102" height="23" viewBox="0 0 102 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+// <g clip-path="url(#clip0_1_2497)">
+// <rect width="102.003" height="23.0002" fill="white" fill-opacity="0.01"/>
+// <rect width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
+// <rect width="30.001" height="3.00025" transform="translate(0 10)" fill="black"/>
+// <rect x="36.001" width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
+// <g opacity="0.5">
+// <rect width="30.001" height="3.00025" transform="translate(36.001 10)" fill="black"/>
+// </g>
+// <rect x="72.002" width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
+// <g opacity="0.5">
+// <rect width="30.001" height="3.00025" transform="translate(72.002 10)" fill="black"/>
+// </g>
+// </g>
+// <defs>
+// <clipPath id="clip0_1_2497">
+// <rect width="102.003" height="23.0002" fill="white"/>
+// </clipPath>
+// </defs>
+// </svg>
+// `;
 
 document.getElementById(
   "second-page"
@@ -49,29 +49,29 @@ document.getElementById(
 </svg>
 `;
 
-document.getElementById(
-  "step-2"
-).innerHTML = `<svg width="102" height="23" viewBox="0 0 102 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1_2507)">
-<rect width="102.003" height="23.0002" fill="white" fill-opacity="0.01"/>
-<rect width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
-<g opacity="0.5">
-<rect width="30.001" height="3.00025" transform="translate(0 10)" fill="black"/>
-</g>
-<rect x="36.001" width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
-<rect width="30.001" height="3.00025" transform="translate(36.001 10)" fill="black"/>
-<rect x="72.002" width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
-<g opacity="0.5">
-<rect width="30.001" height="3.00025" transform="translate(72.002 10)" fill="black"/>
-</g>
-</g>
-<defs>
-<clipPath id="clip0_1_2507">
-<rect width="102.003" height="23.0002" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-`;
+// document.getElementById(
+//   "step-2"
+// ).innerHTML = `<svg width="102" height="23" viewBox="0 0 102 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+// <g clip-path="url(#clip0_1_2507)">
+// <rect width="102.003" height="23.0002" fill="white" fill-opacity="0.01"/>
+// <rect width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
+// <g opacity="0.5">
+// <rect width="30.001" height="3.00025" transform="translate(0 10)" fill="black"/>
+// </g>
+// <rect x="36.001" width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
+// <rect width="30.001" height="3.00025" transform="translate(36.001 10)" fill="black"/>
+// <rect x="72.002" width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
+// <g opacity="0.5">
+// <rect width="30.001" height="3.00025" transform="translate(72.002 10)" fill="black"/>
+// </g>
+// </g>
+// <defs>
+// <clipPath id="clip0_1_2507">
+// <rect width="102.003" height="23.0002" fill="white"/>
+// </clipPath>
+// </defs>
+// </svg>
+// `;
 
 document.getElementById(
   "last-page"
@@ -86,26 +86,26 @@ document.getElementById(
 </svg>
 `;
 
-document.getElementById(
-  "step-3"
-).innerHTML = `<svg width="102" height="23" viewBox="0 0 102 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1_2518)">
-<rect width="102.003" height="23.0002" fill="white" fill-opacity="0.01"/>
-<rect width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
-<g opacity="0.5">
-<rect width="30.001" height="3.00025" transform="translate(0 10)" fill="black"/>
-</g>
-<rect x="36.001" width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
-<g opacity="0.5">
-<rect width="30.001" height="3.00025" transform="translate(36.001 10)" fill="black"/>
-</g>
-<rect x="72.002" width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
-<rect width="30.001" height="3.00025" transform="translate(72.002 10)" fill="black"/>
-</g>
-<defs>
-<clipPath id="clip0_1_2518">
-<rect width="102.003" height="23.0002" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-`;
+// document.getElementById(
+//   "step-3"
+// ).innerHTML = `<svg width="102" height="23" viewBox="0 0 102 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+// <g clip-path="url(#clip0_1_2518)">
+// <rect width="102.003" height="23.0002" fill="white" fill-opacity="0.01"/>
+// <rect width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
+// <g opacity="0.5">
+// <rect width="30.001" height="3.00025" transform="translate(0 10)" fill="black"/>
+// </g>
+// <rect x="36.001" width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
+// <g opacity="0.5">
+// <rect width="30.001" height="3.00025" transform="translate(36.001 10)" fill="black"/>
+// </g>
+// <rect x="72.002" width="30.001" height="23.0002" rx="1" fill="white" fill-opacity="0.01"/>
+// <rect width="30.001" height="3.00025" transform="translate(72.002 10)" fill="black"/>
+// </g>
+// <defs>
+// <clipPath id="clip0_1_2518">
+// <rect width="102.003" height="23.0002" fill="white"/>
+// </clipPath>
+// </defs>
+// </svg>
+// `;
