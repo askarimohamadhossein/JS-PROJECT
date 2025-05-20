@@ -1,4 +1,3 @@
-import "toastify-js/src/toastify.css";
 import { signup } from "./apis/auth";
 import { tokenName } from "./libs/constants";
 
