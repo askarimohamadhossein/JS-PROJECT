@@ -54,8 +54,9 @@ function renderSneakers(response) {
   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptate illum veniam impedit veritatis cum laborum temporibus! Provident ratione ullam iusto voluptatem quas fugit? Perspiciatis, aliquam iusto quisquam laboriosam quaerat distinctio nemo. Earum dolorem error, culpa laboriosam ullam voluptatem! Accusantium natus voluptates, voluptatibus ullam in autem dolorem dolore minus odio.</p>
  </section>
  <section class=" mt-4 mx-5 flex flex-col">
-   ${response.brand}
-   ${response.category}
+  ${response.brand}
+  ${response.category}
+
  </section>
  <section class="flex flex-row gap-2">
    <div id="size" class="w-1/2"></div>
@@ -106,12 +107,18 @@ function renderSneakers(response) {
 
 export function renderColors(response) {
   const colorDiv = document.getElementById("color");
+
   response.colors.split("|").forEach((color) => {
     const button = document.createElement("button");
-    button.className = "border-1 rounded-full p-3 mx-1 w-10 h-10";
+    button.className = "border-1 rounded-full  mx-1 w-9 h-9";
     button.style.backgroundColor = color;
 
-    button.addEventListener("click", function () {
+    button.addEventListener("click", () => {
+      document.querySelectorAll("#color button").forEach((btn) => {
+        btn.innerHTML = "";
+      });
+
+      button.innerHTML = "✓";
       selectedColor = color;
       console.log("Selected Color:", selectedColor);
     });
@@ -128,7 +135,7 @@ function RenderSize(response) {
 
     button.setAttribute("data-id", index);
     button.className =
-      "border-2 rounded-full mx-1 w-10 h-10 text-center border-gray-400";
+      "border-2 rounded-full mx-1 w-9 h-9 text-center border-gray-400";
     button.textContent = size;
 
     button.addEventListener("click", function () {

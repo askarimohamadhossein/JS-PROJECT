@@ -1,5 +1,5 @@
+import "toastify-js/src/toastify.css";
 import { brands, sneakers } from "./apis/sneaker";
-
 const savedUsername = localStorage.getItem("username");
 
 const now = new Date();
