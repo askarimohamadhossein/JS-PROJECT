@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Welcome</title>
+  </head>
+  <body>
+    <div class="overflow-hidden">
+      <div
+        class="flex transition-transform duration-1500 min-h-full"
+        id="steps"
+      >
+        <section>
+          <div id="first-page"></div>
+          <p class="font-semibold text-3xl text-center mt-8">
+            We provide high quality products just for you
+          </p>
+          <div id="step-1" class="flex justify-center mt-10"></div>
+          <div class="flex justify-center">
+            <button
+              id="first-btn"
+              class="bg-black w-[380px] h-[47px] rounded-4xl text-white mt-12 mb-12"
+            >
+              Next
+            </button>
+          </div>
+        </section>
+
+        <section>
+          <div id="second-page"></div>
+          <p class="font-semibold text-3xl text-center mt-8">
+            Your satisfaction is our number one periority
+          </p>
+          <div id="step-2" class="flex justify-center mt-10"></div>
+          <div class="flex justify-center">
+            <button
+              id="second-btn"
+              class="bg-black w-[380px] h-[47px] rounded-4xl text-white mt-12 mb-12"
+            >
+              Next
+            </button>
+          </div>
+        </section>
+
+        <section>
+          <div id="last-page"></div>
+          <p class="font-semibold text-3xl text-center mt-8">
+            Let’s fulfill your fashion needs with shoearight now!
+          </p>
+          <div id="step-3" class="flex justify-center mt-10"></div>
+          <div class="flex justify-center">
+            <button
+              id="last-btn"
+              class="bg-black w-[380px] h-[47px] rounded-4xl text-white mt-12 mb-12"
+            >
+              Get Started
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="src/slider.js"></script>
+    <script type="module" src="src/svg.file.js"></script>
+    <script type="module" src="src/config.js"></script>
+  </body>
+</html>

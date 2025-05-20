@@ -30,11 +30,11 @@ document.getElementById("last-btn").addEventListener("click", function () {
   }
 });
 
-document.getElementById("shoes-svg").addEventListener("click", function () {
-  console.log("ok");
+// document.getElementById("shoes-svg").addEventListener("click", function () {
+//   console.log("ok");
 
-  if (currentStep < 3) {
-    currentStep++;
-    updateUI();
-  }
-});
+//   if (currentStep < 3) {
+//     currentStep++;
+//     updateUI();
+//   }
+// });
