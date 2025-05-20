@@ -30,7 +30,7 @@ dataCart.forEach((data) => {
     <div
       class="flex justify-start items-center gap-2 border-gray-300 py-2"
     >
-      <button class="colorBtn border-1 rounded-full mx-1 w-5 h-5  "></button>
+      <button style="background-color:${data.color};" class="colorBtn border-1 rounded-full mx-1 w-5 h-5   "></button>
       <p class="font-semibold text-sm text-gray-500">color | Size = ${data.size}</p>
     </div>
     <div class="flex justify-between items-center pt-2">

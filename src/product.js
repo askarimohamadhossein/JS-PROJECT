@@ -144,7 +144,7 @@ function RenderSize(response) {
   });
 }
 
-function addPriceShoes(price) {
+export function addPriceShoes(price) {
   document.getElementById("plus").addEventListener("click", function () {
     if (curentNumber === 0) {
       document.getElementById("curentNumber").textContent = curentNumber;

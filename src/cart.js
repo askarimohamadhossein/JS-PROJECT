@@ -220,7 +220,9 @@ function confirmDeleteCart(deletedItem) {
   document.getElementById("remove").addEventListener("click", function (event) {
     const dataId = event.target.getAttribute("dataId");
     console.log(dataId);
-    dataCart = dataCart.filter((item) => item.id !== +dataId);
+    console.log(dataCart.filter((item) => item.id !== +dataId));
+
+    dataCart = dataCart.filter((item) => item.id !== dataId);
     localStorage.setItem("data-new", JSON.stringify(dataCart));
     console.log(dataCart);
 
