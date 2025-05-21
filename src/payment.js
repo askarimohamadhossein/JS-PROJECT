@@ -9,3 +9,15 @@ section.forEach((btn) => {
     btn.classList.add("bg-black");
   });
 });
+
+const end = document.getElementById("show-successfull");
+
+const overly = document.getElementById("main-task-overly");
+
+const confirmBtn = document.getElementById("confirm");
+
+confirmBtn.addEventListener("click", function () {
+  overly.classList.remove("hidden");
+  end.classList.remove("hidden");
+  localStorage.clear();
+});
