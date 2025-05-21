@@ -18,7 +18,7 @@ function renderCart() {
   class="mamadi flex items-center gap-4 shadow-xl rounded-4xl bg-white p-4 mb-6 "
 >
   <img
-    class=" w-36 h-36 rounded-lg"
+    class=" w-36 h-40 rounded-lg"
     src="${data.image}"
     alt="React Miler"
   />
@@ -244,4 +244,7 @@ function confirmDeleteCart(deletedItem) {
 
 document.getElementById("checkout-btn").addEventListener("click", () => {
   window.location.href = "checkout.html";
+});
+document.getElementById("home").addEventListener("click", () => {
+  window.location.href = "home.html";
 });

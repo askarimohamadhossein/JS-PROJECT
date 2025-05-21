@@ -33,9 +33,17 @@ export const renderProduct = async () => {
 
 function renderSneakers(response) {
   document.getElementById("main-product").innerHTML = `
-    <section class="w-full h-[328px] flex justify-center items-center bg-gray-100">
-   <img width="328px" height="328px" src="${response.imageURL}" alt="" />
- </section>
+  <img id="back-home" class=" w-30 h-25 absolute z-20 m-1" src="src/image/back-step.png" alt="" />
+    <div class="relative overflow-hidden w-full h-[400px] bg-gray-100 flex items-center justify-center">
+  <div id="slider" class="flex gap-4 animate-slider">
+    <img width="328px" height="328px" src="${response.imageURL}" alt="" />
+    <img width="328px" height="328px" src="${response.imageURL}" alt="" />
+    <img width="328px" height="328px" src="${response.imageURL}" alt="" />
+    <img width="328px" height="328px" src="${response.imageURL}" alt="" />
+    <img width="328px" height="328px" src="${response.imageURL}" alt="" />
+    
+  </div>
+</div>
  <section class="flex flex-row justify-between m-4">
    <h1 class="font-bold text-3xl mt-5">${response.name}</h1>
    <img width="28px" height="28px" src="src/svg/like.svg" alt="" />
@@ -48,21 +56,20 @@ function renderSneakers(response) {
      src="src/image/Screenshot 2025-05-14 154237.png"
      alt=""
    />
-   <div class="border-b-1 border-gray-400 mt-4"></div>
+   <div class="border-b-1 border-gray-200 mt-4"></div>
  </section>
- <section class="line-clamp-3 mt-5">
-  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptate illum veniam impedit veritatis cum laborum temporibus! Provident ratione ullam iusto voluptatem quas fugit? Perspiciatis, aliquam iusto quisquam laboriosam quaerat distinctio nemo. Earum dolorem error, culpa laboriosam ullam voluptatem! Accusantium natus voluptates, voluptatibus ullam in autem dolorem dolore minus odio.</p>
+ <section id="sectionDesc" class="line-clamp-3 mt-3 mb-8 mx-2 text-gray-700 text-center">
+  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptate illum veniam impedit veritatis cum laborum temporibus! Provident ratione <b id="b">ullam</b> iusto voluptatem quas fugit? Perspiciatis, .</p>
  </section>
  <section class=" mt-4 mx-5 flex flex-col">
-  ${response.brand}
-  ${response.category}
+  
 
  </section>
- <section class="flex flex-row gap-2">
+ <section class="flex flex-row gap-2 justify-center items-center w-full mx-auto">
    <div id="size" class="w-1/2"></div>
    <div id="color" class="space-x-2 overflow-x-scroll whitespace-nowrap "></div>
  </section>
- <section class="flex justify-start items-center gap-5 mx-5 mt-14">
+ <section class="flex justify-start items-center gap-5 mx-5 mt-8">
    <h1 class="text-xl font-bold">Quantity</h1>
    <div class="flex justify-center items-center w-fit">
      <button
@@ -103,22 +110,32 @@ function renderSneakers(response) {
     `;
   document.getElementById("curentNumber").textContent = curentNumber;
   document.getElementById("priceNumber").textContent = `$${newPrice}.00`;
+  document.getElementById("b").addEventListener("click", function () {
+    document.getElementById("sectionDesc").classList.remove("line-clamp-3");
+  });
+  document.getElementById("back-home").addEventListener("click", function () {
+    window.location.href = "home.html";
+  });
 }
 
 export function renderColors(response) {
   const colorDiv = document.getElementById("color");
-
+  colorDiv.className = "flex flex-row items-center justify-center   ";
   response.colors.split("|").forEach((color) => {
     const button = document.createElement("button");
-    button.className = "border-1 rounded-full  mx-1 w-9 h-9";
+    button.className = " rounded-full  mx-1 w-9 h-9 ";
     button.style.backgroundColor = color;
+
+    if (color === "white") {
+      button.className = "border-1 border-gray-400 rounded-full  mx-1 w-9 h-9";
+    }
 
     button.addEventListener("click", () => {
       document.querySelectorAll("#color button").forEach((btn) => {
         btn.innerHTML = "";
       });
+      button.innerHTML = `<img src="src/image/tik-icon.jpg" alt="">`;
 
-      button.innerHTML = "✓";
       selectedColor = color;
       console.log("Selected Color:", selectedColor);
     });
@@ -135,7 +152,7 @@ function RenderSize(response) {
 
     button.setAttribute("data-id", index);
     button.className =
-      "border-2 rounded-full mx-1 w-9 h-9 text-center border-gray-400";
+      "border-2 rounded-full mx-1 w-9 h-9 text-center border-gray-400 ";
     button.textContent = size;
 
     button.addEventListener("click", function () {

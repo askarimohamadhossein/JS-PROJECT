@@ -88,3 +88,10 @@ export function renderShoes(data) {
       </div>`;
   });
 }
+
+document.getElementById("checkout-btn").addEventListener("click", () => {
+  window.location.href = "checkout.html";
+});
+document.getElementById("home").addEventListener("click", () => {
+  window.location.href = "home.html";
+});

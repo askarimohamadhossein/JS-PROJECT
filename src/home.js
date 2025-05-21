@@ -103,11 +103,6 @@ export function renderShoes(data) {
     shoes.appendChild(container);
   });
 
-  function filterShoesByBrand(selectedBrand) {
-    const filteredShoes = data.filter((item) => item.brand === selectedBrand);
-    renderShoes(filteredShoes); // نمایش فقط کفش‌های برند انتخاب‌شده
-  }
-
   //اینجا id رو توی لوکال استوریج ذخیره کردم ک روی هر عکس کلیک شد منو ببره به ایدی همون عکس توی جزئیات محصول
 
   document.querySelectorAll(".shoe-image").forEach((img) => {
@@ -170,3 +165,10 @@ Toastify({
     background: "linear-gradient(to right, #00b09b, #96c93d)",
   },
 }).showToast();
+
+document.getElementById("cart").addEventListener("click", function () {
+  window.location.href = "cart.html";
+});
+document.getElementById("order").addEventListener("click", function () {
+  window.location.href = "checkout.html";
+});

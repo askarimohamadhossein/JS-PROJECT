@@ -18,11 +18,10 @@
   border-top: 10px solid black;
   width: 48px;
   height: 48px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
+  -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
 
-/* Safari */
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -39,4 +38,17 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slider {
+  animation: slider 10s linear infinite;
 }
