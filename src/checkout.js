@@ -5,7 +5,13 @@ console.log(dataCart);
 let quantity = null;
 let newPrice = null;
 
-const locationHistory = JSON.parse(localStorage.getItem("location"));
+let locationHistory = JSON.parse(localStorage.getItem("location"));
+
+let shippingHistory = JSON.parse(localStorage.getItem("choose-shipping"));
+
+const shippingSelected = document.getElementById("choose");
+shippingSelected.innerHTML = `${shippingHistory}`;
+
 const locationSelected = document.getElementById("location");
 locationSelected.innerHTML = `
 <section
@@ -105,3 +111,5 @@ function renderBtn(value) {
   </div>
   `;
 }
+
+let choose = document.getElementById("choose");
