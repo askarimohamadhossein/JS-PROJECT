@@ -5,6 +5,30 @@ console.log(dataCart);
 let quantity = null;
 let newPrice = null;
 
+const locationHistory = JSON.parse(localStorage.getItem("location"));
+const locationSelected = document.getElementById("location");
+locationSelected.innerHTML = `
+<section
+   class="flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl"
+ >
+   <div class="flex">
+     <img src="src/image/location2.png" alt="" />
+     <div class="mx-3">
+       <p class="font-bold">${locationHistory}</p>
+       <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet.</p>
+     </div>
+   </div>
+   <div>
+     <img
+       id="select-location"
+       width="25px"
+       height="25px"
+       src="src/image/edit.jpg"
+       alt=""
+     />
+   </div>
+ </section>`;
+
 dataCart.forEach((data) => {
   quantity = data.quantity;
   document.getElementById("checkout-container").innerHTML += `
