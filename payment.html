@@ -8,10 +8,13 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Welcome</title>
+    <title>payment</title>
   </head>
   <body>
-    <main>
+    <main id="main-task-overly">
+      <section
+        class="hidden z-40 fixed bg-black/60 left-0 top-0 w-dvw h-dvh"
+      ></section>
       <section class="flex flex-row justify-between mt-5 mx-3">
         <div class="flex gap-2 justify-center items-center">
           <a href="checkout.html"
@@ -29,7 +32,7 @@
       </p>
       <section class="">
         <section
-          class="flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
+          class="payment flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
         >
           <div class="flex items-center">
             <img
@@ -47,7 +50,7 @@
       </section>
       <section>
         <section
-          class="flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
+          class="payment flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
         >
           <div class="flex items-center">
             <img width="40px" height="40px" src="src/image/paypal.png" alt="" />
@@ -60,7 +63,7 @@
       </section>
       <section>
         <section
-          class="flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
+          class="payment flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
         >
           <div class="flex items-center">
             <img
@@ -78,7 +81,7 @@
       </section>
       <section>
         <section
-          class="flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
+          class="payment flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
         >
           <div class="flex items-center">
             <img
@@ -94,7 +97,7 @@
           <button class="border-2 w-5 h-5 rounded-full"></button>
         </section>
         <section
-          class="flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
+          class="payment flex justify-between items-center mx-5 mt-5 shadow-md p-5 rounded-4xl hover:shadow-2xl cursor-pointer"
         >
           <div class="flex items-center">
             <img
@@ -110,17 +113,20 @@
           <button class="border-2 w-5 h-5 rounded-full"></button>
         </section>
       </section>
-      <div class="flex justify-center"></div>
+      <div class="payment flex justify-center"></div>
       <section class="fixed w-full bottom-0 left-0">
-        <div class="flex justify-center">
+        <div class="flex justify-center items-center">
           <button
-            class="bg-black w-[380px] h-[47px] rounded-4xl text-white mt-5 mb-12 font-semibold"
+            class="bg-black w-[380px] h-[47px] rounded-4xl text-white mt-5 mb-12 font-semibold fixed bottom-2"
           >
             Confirm Payment
           </button>
         </div>
       </section>
-      <div class="hidden relative bottom-120 left-10">
+      <div
+        id="show-successfull"
+        class="hidden z-60 relative bottom-120 left-10"
+      >
         <section
           class="flex flex-col justify-center items-center bg-white shadow-2xl w-[350px] h-[500px] rounded-2xl gap-5"
         >
@@ -142,6 +148,7 @@
         </section>
       </div>
     </main>
+    <script type="module" src="src/payment.js"></script>
     <script type="module" src="src/config.js"></script>
   </body>
 </html>
